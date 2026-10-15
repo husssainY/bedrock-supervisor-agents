@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bedrock-supervisor-agents"
+version = "1.0.0"
+description = "Supervisor multi-agent assistant for an energy utility on Amazon Bedrock and LangGraph"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Mohamed Munavar Hussain Y" }]
+dependencies = [
+    "langgraph>=0.2",
+    "boto3>=1.34",
+]
+
+[project.optional-dependencies]
+opensearch = ["opensearch-py>=2.4"]
+dev = ["pytest>=8", "ruff>=0.5"]
+
+[project.scripts]
+energy-agents = "energy_agents.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "N"]

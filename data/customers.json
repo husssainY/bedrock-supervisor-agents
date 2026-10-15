@@ -1,0 +1,69 @@
+{
+  "tariff": {
+    "name": "Residential LT-1 (sample)",
+    "currency": "INR",
+    "fixed_charge": 120.0,
+    "slabs": [
+      { "up_to_kwh": 100, "rate": 4.15 },
+      { "up_to_kwh": 200, "rate": 5.6 },
+      { "up_to_kwh": null, "rate": 7.15 }
+    ],
+    "tax_rate": 0.09
+  },
+  "customers": [
+    {
+      "customer_id": "C1001",
+      "name": "Priya Raman",
+      "area": "Koramangala",
+      "plan": "residential",
+      "solar": false,
+      "monthly_kwh": {
+        "2025-10": 182, "2025-11": 171, "2025-12": 165, "2026-01": 168,
+        "2026-02": 176, "2026-03": 214, "2026-04": 262, "2026-05": 291,
+        "2026-06": 238, "2026-07": 205, "2026-08": 199, "2026-09": 274
+      }
+    },
+    {
+      "customer_id": "C1002",
+      "name": "Arjun Mehta",
+      "area": "Whitefield",
+      "plan": "residential",
+      "solar": true,
+      "monthly_kwh": {
+        "2025-10": 96, "2025-11": 104, "2025-12": 110, "2026-01": 101,
+        "2026-02": 88, "2026-03": 79, "2026-04": 84, "2026-05": 92,
+        "2026-06": 99, "2026-07": 108, "2026-08": 103, "2026-09": 95
+      }
+    },
+    {
+      "customer_id": "C1003",
+      "name": "Fatima Begum",
+      "area": "Jayanagar",
+      "plan": "residential",
+      "solar": false,
+      "monthly_kwh": {
+        "2025-10": 140, "2025-11": 138, "2025-12": 150, "2026-01": 149,
+        "2026-02": 143, "2026-03": 160, "2026-04": 188, "2026-05": 196,
+        "2026-06": 171, "2026-07": 158, "2026-08": 152, "2026-09": 149
+      }
+    }
+  ],
+  "outages": [
+    {
+      "ticket_id": "OUT-5531",
+      "area": "Whitefield",
+      "status": "in_progress",
+      "reported_at": "2026-10-15T18:40:00+05:30",
+      "estimated_restore": "2026-10-16T09:00:00+05:30",
+      "cause": "Transformer maintenance"
+    },
+    {
+      "ticket_id": "OUT-5517",
+      "area": "Koramangala",
+      "status": "resolved",
+      "reported_at": "2026-10-11T07:10:00+05:30",
+      "estimated_restore": "2026-10-11T10:30:00+05:30",
+      "cause": "Feeder fault"
+    }
+  ]
+}
